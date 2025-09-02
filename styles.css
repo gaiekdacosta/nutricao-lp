@@ -1,0 +1,14 @@
+:root {
+    --primary: #0554F2;
+    --secondary: #10DEDF;
+    --nav-height: 76px;
+}
+
+body {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.active {
+    color: var(--secondary) !important;
+}

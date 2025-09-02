@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dr. Tiago Marinho</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body class="bg-white text-gray-900">
+    <header
+        class="fixed top-0 left-0 right-0 z-30 bg-[var(--primary)] text-white flex items-center justify-around px-10 h-[var(--nav-height)] border-b border-black/10">
+        <a href="/" class="flex items-center gap-3 no-underline text-inherit">
+            <div class="flex flex-col leading-none">
+                <span class="font-bold text-2xl">Dr. TIAGO MARINHO</span>
+                <span class="text-base">Nutrologia Avançada</span>
+            </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 font-semibold text-sm" aria-label="menu">
+            <a href="#home" class="px-2 py-2 rounded">INÍCIO</a>
+            <a href="#como-funciona" class="px-2 py-2 rounded">COMO FUNCIONA</a>
+            <a href="#tratamento" class="px-2 py-2 rounded">TRATAMENTO</a>
+            <a href="#depoimentos" class="px-2 py-2 rounded">DEPOIMENTOS</a>
+            <a href="#contato" class="px-2 py-2 rounded">CONTATO</a>
+            <button
+                class="flex flex-col items-center justify-center gap-1 px-6 py-2 rounded-full bg-[#012D84] hover:bg-[var(--secondary)] hover:text-black font-bold text-xs tracking-widest transition">
+                <p>AGENDAR</p>
+                <p>AVALIAÇÃO</p>
+            </button>
+        </nav>
+        <button id="hambtn"
+            class="md:hidden flex items-center justify-center w-12 h-12 rounded bg-white border border-black/10"
+            aria-label="Abrir menu">
+            <span
+                class="block w-5 h-0.5 bg-black relative before:content-[''] before:absolute before:-top-1.5 before:w-5 before:h-0.5 before:bg-black after:content-[''] after:absolute after:top-1.5 after:w-5 after:h-0.5 after:bg-black"></span>
+        </button>
+    </header>
+
+    <nav id="mobileMenu"
+        class="hidden absolute top-[var(--nav-height)] left-0 right-0 bg-white border-b border-black/10 shadow-lg md:hidden"
+        aria-hidden="true">
+        <a href="#home" class="block px-5 py-3 font-semibold border-t border-black/5">Início</a>
+        <a href="#como-funciona" class="block px-5 py-3 font-semibold border-t border-black/5">Como funciona</a>
+        <a href="#tratamento" class="block px-5 py-3 font-semibold border-t border-black/5">Tratamento</a>
+        <a href="#depoimentos" class="block px-5 py-3 font-semibold border-t border-black/5">Depoimentos</a>
+        <a href="#contato" class="block px-5 py-3 font-semibold border-t border-black/5">Contato</a>
+    </nav>
+
+    <section id="home"
+        class="flex items-center justify-center px-[10%] pt-[120px] pb-[60px] min-h-screen bg-gradient-to-r from-[var(--primary)] to-[#012D84] text-white">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-10 max-w-6xl w-full">
+            <div class="flex-1 text-center md:text-left">
+                <p class="text-3xl font-normal text-[var(--secondary)]">Dr. Tiago Marinho</p>
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-4">Nutrologia e performance como você nunca
+                    viu</h1>
+                <p class="text-base text-gray-200 mb-4">
+                    97% de satisfação já na primeira semana de tratamento! Gerenciamento de
+                    sobrepeso e medicina avançada para você finalmente alcançar o resultado
+                    que sempre sonhou.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#contato"
+                        class="bg-[var(--secondary)] text-black font-bold text-base px-8 py-3 rounded-full transition hover:bg-cyan-500 hover:-translate-y-1">Agendar
+                        Avaliação</a>
+                    <a href="#"
+                        class="inline-flex items-center justify-center bg-[#25D366] text-white px-8 py-3 rounded-full font-bold text-base shadow-md hover:bg-[#128C7E] hover:-translate-y-1 transition">Enviar
+                        Mensagem</a>
+                </div>
+            </div>
+            <div class="flex-1 flex justify-center">
+                <img src="./public/Hero03.jpg" alt="Dr. Tiago Marinho" class="max-w-full rounded-lg shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <section id="como-funciona"
+        class="min-h-screen flex flex-col items-center justify-center px-6 md:px-20 py-20 text-center">
+        <div class="max-w-3xl">
+            <h3 class="text-2xl md:text-3xl font-bold mb-6">Segredo para Gerenciar o sobrepeso</h3>
+            <p class="text-gray-700 mb-6">
+                Seu corpo e seu padrão são únicos, seu tratamento também precisa ser.
+                Iremos criar seu protocolo exclusivo baseado em seu fenótipo,
+                levando em consideração suas características genéticas e necessidades metabólicas individuais.
+                Essa é a chave para seu resultado.
+            </p>
+            <button
+                class="bg-[var(--primary)] text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition">Agendar
+                Avaliação</button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 w-full max-w-5xl">
+            <div class="p-6 border rounded-lg shadow text-center">
+                <h4 class="font-semibold mb-4">Padrão Beliscador</h4>
+                <a href="#" class="text-[var(--primary)] font-bold">Agendar Já</a>
+            </div>
+            <div class="p-6 border rounded-lg shadow"></div>
+            <div class="p-6 border rounded-lg shadow"></div>
+            <div class="p-6 border rounded-lg shadow"></div>
+        </div>
+    </section>
+
+    <section id="tratamento" class="min-h-screen flex items-center justify-center text-3xl font-bold">TRATAMENTO
+    </section>
+    <section id="depoimentos" class="min-h-screen flex items-center justify-center text-3xl font-bold">DEPOIMENTOS
+    </section>
+    <section id="contato" class="min-h-screen flex items-center justify-center text-3xl font-bold">CONTATO</section>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
