@@ -7,6 +7,7 @@
     <title>Dr. Tiago Marinho</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./styles.css">
 </head>
 
@@ -67,7 +68,7 @@
                         Avaliação</a>
                     <a href="#"
                         class="inline-flex items-center justify-center bg-[#25D366] text-white px-8 py-3 rounded-full font-bold text-base shadow-md hover:bg-[#128C7E] hover:-translate-y-1 transition">Enviar
-                        Mensagem</a>
+                        Mensagem <i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="flex-1 flex justify-center">
@@ -76,28 +77,66 @@
         </div>
     </section>
 
-    <section id="como-funciona"
-        class="min-h-screen flex flex-col items-center justify-center px-6 md:px-20 py-20 text-center">
-        <div class="max-w-3xl">
-            <h3 class="text-2xl md:text-3xl font-bold mb-6">Segredo para Gerenciar o sobrepeso</h3>
-            <p class="text-gray-700 mb-6">
+    <section id="como-funciona" class="min-h-screen bg-[#F1F1F1] flex items-center justify-center">
+        <div class="max-w-[45rem]">
+            <h3 class="text-[4rem] font-bold mb-6 text-[#0C70F2] leading-[3.5rem] w-[70%]">
+                Segredo para Gerenciar o
+                sobrepeso
+            </h3>
+            <p class="text-gray-700 mb-4 w-[70%]">
                 Seu corpo e seu padrão são únicos, seu tratamento também precisa ser.
                 Iremos criar seu protocolo exclusivo baseado em seu fenótipo,
                 levando em consideração suas características genéticas e necessidades metabólicas individuais.
                 Essa é a chave para seu resultado.
             </p>
             <button
-                class="bg-[var(--primary)] text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition">Agendar
-                Avaliação</button>
+                class="bg-[var(--primary)] text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
+                Agendar Avaliação <i class="fa-solid fa-arrow-right"></i>
+            </button>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 w-full max-w-5xl">
-            <div class="p-6 border rounded-lg shadow text-center">
-                <h4 class="font-semibold mb-4">Padrão Beliscador</h4>
-                <a href="#" class="text-[var(--primary)] font-bold">Agendar Já</a>
+        <div class="flex flex-col gap-5">
+            <div class="flex gap-5">
+                <div
+                    class="flex bg-white flex-col p-8 gap-2 w-[250px] h-[230px] justify-center border rounded-lg shadow text-[#0C70F2] -translate-y-4">
+                    <i class="fa-solid fa-pizza-slice text-[45px]"></i>
+                    <h4 class="font-bold text-[30px] w-[50%] leading-none">Padrão Beliscador</h4>
+                    <a href="#" class="text-[17px] text-[var(--primary)] font-bold">
+                        Agendar Já
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div
+                    class="flex bg-white flex-col p-8 gap-2 w-[250px] h-[230px] justify-center border rounded-lg shadow text-[#0C70F2] translate-y-4">
+                    <i class="fa-solid fa-backward-fast text-[45px]"></i>
+                    <h4 class="font-bold mb-4 text-[30px] w-[50%] leading-none">Padrão Metabolismo Lento</h4>
+                    <a href="#" class="text-[var(--primary)] font-bold">
+                        Agendar Já
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
-            <div class="p-6 border rounded-lg shadow"></div>
-            <div class="p-6 border rounded-lg shadow"></div>
-            <div class="p-6 border rounded-lg shadow"></div>
+
+            <div class="flex gap-5 mt-5">
+                <div
+                    class="flex bg-white flex-col p-8 gap-2 w-[250px] h-[230px] justify-center border rounded-lg shadow text-[#0C70F2] -translate-y-4">
+                    <i class="fa-solid fa-utensils text-[45px]"></i>
+                    <h4 class="font-bold mb-4 text-[30px] w-[50%] leading-none">Padrão Baixa Saciedade</h4>
+                    <a href="#" class="text-[var(--primary)] font-bold">
+                        Agendar Já
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div
+                    class="flex bg-white flex-col p-8 gap-2 w-[250px] h-[230px] justify-center border rounded-lg shadow text-[#0C70F2] translate-y-4">
+                    <i class="fa-solid fa-burger text-[45px]"></i>
+                    <h4 class="font-bold mb-4 text-[30px] w-[50%] leading-none">Padrão Baixa Saciação</h4>
+                    <a href="#" class="text-[var(--primary)] font-bold">
+                        Agendar Já
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </section>
 
