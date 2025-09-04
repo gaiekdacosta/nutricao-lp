@@ -14,9 +14,9 @@
 <body class="bg-white text-gray-900">
     <header
         class="fixed top-0 left-0 right-0 z-30 bg-[var(--primary)] text-white flex items-center justify-around px-10 h-[var(--nav-height)] border-b border-black/10">
-        <a href="/" class="flex items-center gap-3 no-underline text-inherit">
+        <a href="/" class="flex items-center no-underline text-inherit">
             <div class="flex flex-col leading-none">
-                <span class="font-bold text-2xl">Dr. TIAGO MARINHO</span>
+                <span class="font-bold text-2xl mb-[-0.5rem]">Dr. TIAGO MARINHO</span>
                 <span class="text-base">Nutrologia Avançada</span>
             </div>
         </a>
@@ -27,8 +27,8 @@
             <a href="#depoimentos" class="px-2 py-2 rounded">DEPOIMENTOS</a>
             <a href="#contato" class="px-2 py-2 rounded">CONTATO</a>
             <button
-                class="flex flex-col items-center justify-center gap-1 px-6 py-2 rounded-full bg-[#012D84] hover:bg-[var(--secondary)] hover:text-black font-bold text-xs tracking-widest transition">
-                <p>AGENDAR</p>
+                class="flex flex-col items-center justify-center gap-1 px-6 py-2 rounded-full text-[#13F2DC] bg-[#012D84] hover:bg-[var(--secondary)] hover:text-black font-bold text-xs tracking-widest transition">
+                <p class="mb-[-0.5rem]">AGENDAR</p>
                 <p>AVALIAÇÃO</p>
             </button>
         </nav>
@@ -67,8 +67,9 @@
                         class="bg-[var(--secondary)] text-black font-bold text-base px-8 py-3 rounded-full transition hover:bg-cyan-500 hover:-translate-y-1">Agendar
                         Avaliação</a>
                     <a href="#"
-                        class="inline-flex items-center justify-center bg-[#25D366] text-white px-8 py-3 rounded-full font-bold text-base shadow-md hover:bg-[#128C7E] hover:-translate-y-1 transition">Enviar
-                        Mensagem <i class="fa-brands fa-whatsapp"></i></a>
+                        class="inline-flex gap-2 items-center justify-center bg-[#25D366] text-white px-8 py-3 rounded-full font-bold text-base shadow-md hover:bg-[#128C7E] hover:-translate-y-1 transition">
+                        Enviar Mensagem <i class="fa-brands fa-whatsapp text-[22px]"></i>
+                    </a>
                 </div>
             </div>
             <div class="flex-1 flex justify-center">
@@ -145,6 +146,30 @@
     <section id="depoimentos" class="min-h-screen flex items-center justify-center text-3xl font-bold">DEPOIMENTOS
     </section>
     <section id="contato" class="min-h-screen flex items-center justify-center text-3xl font-bold">CONTATO</section>
+
+    <footer id="footer" class="relative min-h-[40vh] bg-[var(--primary)]">
+        <div class="flex flex-col gap-5 pt-[2.5rem] w-full justify-center items-center">
+            <h4 class="text-white text-center font-bold text-[3rem] leading-none">
+                Pronto(a) para sua melhor versão? <br />
+                Agende sua avaliação
+                <span class="relative z-10 text-[#13F2DC]">agora mesmo!</span>
+            </h4>
+            <div class="flex gap-3">
+                <button class="bg-blue-900 text-white px-12 py-3 rounded-full font-bold">
+                    AGENDAR AVALIAÇÃO <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <a href="#"
+                    class="inline-flex gap-2 items-center justify-center bg-[#25D366] text-white px-8 py-3 rounded-full font-bold text-base shadow-md hover:bg-[#128C7E] hover:-translate-y-1 transition">
+                    ENVIAR MENSAGEM <i class="fa-brands fa-whatsapp text-[22px]"></i>
+                </a>
+            </div>
+        </div>
+        <div class="flex justify-around text-center items-center p-4 absolute bottom-0 w-full bg-black text-white">
+            <p>Dr. Tiago Marinho | ❤ Nutrologia Avançada</p>
+            <p>© Todos os direitos reservados - 2025</p>
+        </div>
+    </footer>
+
     <script src="./scripts.js"></script>
 </body>
 
