@@ -1,30 +1,524 @@
-:root {
-    --primary: #0554F2;
-    --title: #0C70F2;
-    --secondary: #10DEDF;
-    --nav-height: 76px;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-body {
-    font-family: 'Montserrat', system-ui, sans-serif;
-    scroll-behavior: smooth;
-    background: white;
-}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dr. Tiago Marinho</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
 
-html {
-    scroll-behavior: smooth;
-}
+<body class="text-gray-900">
+    <header
+        class="fixed top-0 left-0 right-0 z-30 bg-[var(--primary)] text-white flex items-center justify-around px-10 h-[var(--nav-height)] border-b border-black/10">
+        <a href="/" class="flex items-center no-underline text-inherit">
+            <div class="flex flex-col leading-none">
+                <span class="font-bold text-2xl mb-[-0.5rem]">Dr. TIAGO MARINHO</span>
+                <span class="text-base">Nutrologia Avançada</span>
+            </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 font-semibold text-sm" aria-label="menu">
+            <a href="#home" class="px-2 py-2">INÍCIO</a>
+            <a href="#como-funciona" class="px-2 py-2">COMO FUNCIONA</a>
+            <a href="#sobre-mim" class="px-2 py-2">SOBRE MIM</a>
+            <a href="#tratamentos" class="px-2 py-2">TRATAMENTOS</a>
+            <a href="#perguntas" class="px-2 py-2">PERGUNTAS</a>
+            <a href="#contato" class="px-2 py-2">CONTATO</a>
+            <a href="#contato"
+                class="flex flex-col items-center justify-center gap-1 px-6 py-2 rounded-full text-[#13F2DC] bg-[#012D84] hover:bg-[var(--secondary)] hover:text-black font-bold text-xs tracking-widest transition">
+                <p class="mb-[-0.5rem]">AGENDAR</p>
+                <p>AVALIAÇÃO</p>
+            </a>
+        </nav>
+        <button id="hambtn"
+            class="md:hidden flex items-center justify-center w-12 h-12 rounded bg-white border border-black/10"
+            aria-label="Abrir menu">
+            <span
+                class="block w-5 h-0.5 bg-black relative before:content-[''] before:absolute before:-top-1.5 before:w-5 before:h-0.5 before:bg-black after:content-[''] after:absolute after:top-1.5 after:w-5 after:h-0.5 after:bg-black"></span>
+        </button>
+    </header>
 
+    <nav id="mobileMenu"
+        class="hidden absolute top-[var(--nav-height)] left-0 right-0 bg-white border-b border-black/10 shadow-lg md:hidden"
+        aria-hidden="true">
+        <a href="#home" class="block px-5 py-3 font-semibold border-t border-black/5">Início</a>
+        <a href="#como-funciona" class="block px-5 py-3 font-semibold border-t border-black/5">Como funciona</a>
+        <a href="#sobre-mim" class="block px-5 py-3 font-semibold border-t border-black/5">Sobre Mim</a>
+        <a href="#depoimentos" class="block px-5 py-3 font-semibold border-t border-black/5">Depoimentos</a>
+        <a href="#tratamentos" class="block px-5 py-3 font-semibold border-t border-black/5">Tratamentos</a>
+        <a href="#contato" class="block px-5 py-3 font-semibold border-t border-black/5">Contato</a>
+    </nav>
 
-.active {
-    color: var(--secondary) !important;
-}
+    <section id="home"
+        class="flex items-center justify-center px-[10%]  pb-[60px] min-h-screen bg-gradient-to-r from-[#001a4d] via-[var(--primary)] to-[#012D84] text-white">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-10 max-w-6xl w-full">
+            <div class="flex-1 text-center md:text-left">
+                <p class="text-3xl font-normal text-[var(--secondary)]">Dr. Tiago Marinho</p>
+                <h1 class="text-[5rem] md:text-6xl font-extrabold leading-none mb-4">
+                    Nutrologia e performance como você nunca viu
+                </h1>
+                <p class="text-base text-gray-200 mb-4">
+                    97% de satisfação já na primeira semana de SOBRE MIM! Gerenciamento de
+                    sobrepeso e medicina avançada para você finalmente alcançar o resultado
+                    que sempre sonhou.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#contato"
+                        class="bg-[var(--secondary)] text-black font-bold text-base px-8 py-3 rounded-full transition hover:bg-cyan-500 ">Agendar
+                        Avaliação</a>
+                    <a href="#"
+                        class="inline-flex gap-2 items-center justify-center bg-[#25D366] text-white px-8 py-3 rounded-full font-bold text-base shadow-md hover:bg-[#128C7E]  transition">
+                        Enviar Mensagem <i class="fa-brands fa-whatsapp text-[22px]"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="flex-1 flex justify-center h-[100vh]">
+                <img src="./public/Adobe Express - file.png" alt="Dr. Tiago Marinho">
+            </div>
+        </div>
+    </section>
 
-nav a {
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-}
+    <section id="como-funciona" class="min-h-screen bg-[#F1F1F1] flex items-center justify-center">
+        <div class="max-w-[45rem]">
+            <h3 class="text-[4rem] font-bold mb-6 text-[#0C70F2] leading-[3.5rem] w-[70%]">
+                Segredo para Gerenciar o
+                sobrepeso
+            </h3>
+            <p class="text-gray-700 mb-4 w-[70%]">
+                Seu corpo e seu padrão são únicos, seu SOBRE MIM também precisa ser.
+                Iremos criar seu protocolo exclusivo baseado em seu fenótipo,
+                levando em consideração suas características genéticas e necessidades metabólicas individuais.
+                Essa é a chave para seu resultado.
+            </p>
+            <a href="#contato"
+                class="bg-[var(--primary)] text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition inline-block text-center">
+                Agendar Avaliação <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="flex flex-col gap-5">
+            <div class="flex gap-5">
+                <div
+                    class="flex bg-white flex-col p-8 gap-2 w-[250px] h-[230px] justify-center border rounded-lg shadow text-[#0C70F2] -translate-y-4">
+                    <i class="fa-solid fa-pizza-slice text-[45px]"></i>
+                    <h4 class="font-bold text-[30px] w-[50%] leading-none">Padrão Beliscador</h4>
+                    <a href="#contato" class="text-[17px] text-[var(--primary)] font-bold">
+                        Agendar Já
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div
+                    class="flex bg-white flex-col p-8 gap-2 w-[250px] h-[230px] justify-center border rounded-lg shadow text-[#0C70F2] translate-y-4">
+                    <i class="fa-solid fa-backward-fast text-[45px]"></i>
+                    <h4 class="font-bold mb-4 text-[30px] w-[50%] leading-none">Padrão Metabolismo Lento</h4>
+                    <a href="#contato" class="text-[var(--primary)] font-bold">
+                        Agendar Já
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
 
-nav a.active {
-    color: #13F2DC;
-    border-bottom: 2px solid #13F2DC;
-}
+            <div class="flex gap-5 mt-5">
+                <div
+                    class="flex bg-white flex-col p-8 gap-2 w-[250px] h-[230px] justify-center border rounded-lg shadow text-[#0C70F2] -translate-y-4">
+                    <i class="fa-solid fa-utensils text-[45px]"></i>
+                    <h4 class="font-bold mb-4 text-[30px] w-[50%] leading-none">Padrão Baixa Saciedade</h4>
+                    <a href="#contato" class="text-[var(--primary)] font-bold">
+                        Agendar Já
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div
+                    class="flex bg-white flex-col p-8 gap-2 w-[250px] h-[230px] justify-center border rounded-lg shadow text-[#0C70F2] translate-y-4">
+                    <i class="fa-solid fa-burger text-[45px]"></i>
+                    <h4 class="font-bold mb-4 text-[30px] w-[50%] leading-none">Padrão Baixa Saciação</h4>
+                    <a href="#contato" class="text-[var(--primary)] font-bold">
+                        Agendar Já
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mim" class="flex justify-between px-[10%] pt-[120px] pb-[60px] min-h-screen 
+        bg-gradient-to-r from-[#001a4d] via-[var(--primary)] to-[#012D84] text-white">
+        <div class="flex justify-center">
+            <img src="./public/Dr.-Tiago-79.jpg" alt="Dr. Tiago Marinho"
+                class="w-[25rem] mb-[50px] h-[35rem] rounded-2xl shadow-lg object-cover" />
+        </div>
+        <div class="flex flex-col gap-2">
+            <h3 class="text-[3rem] font-bold mb-[-1rem]">Dr Tiago Marinho</h3>
+            <h4 class="font-semibold">
+                CRM SP: 256758
+            </h4>
+            <p class="w-[45vw]">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Error repudiandae iste sed consequuntur soluta deleniti est expedita sapiente,
+                impedit aliquid officiis iure? Et laborum unde deleniti voluptatem quae hic laudantium.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                In aut sapiente quasi culpa error assumenda temporibus
+                distinctio modi provident ipsum eaque quo,
+                doloremque, animi asperiores ut iure recusandae consequuntur cum.
+                <br /> <br />
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Error repudiandae iste sed consequuntur soluta deleniti est expedita sapiente,
+                impedit aliquid officiis iure? Et laborum unde deleniti voluptatem quae hic laudantium.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <ol class="list-decimal list-inside text-lg space-y-2">
+                <li class="flex items-center gap-2">
+                    <i class="fas fa-check-circle text-[#13ECCE]"></i>
+                    Atendimento humanizado
+                </li>
+                <li class="flex items-center gap-2">
+                    <i class="fas fa-user-md text-[#13ECCE]"></i>
+                    Profissional experiente
+                </li>
+                <li class="flex items-center gap-2">
+                    <i class="fas fa-stethoscope text-[#13ECCE]"></i>
+                    Diagnóstico preciso
+                </li>
+            </ol>
+            <a href="#contato"
+                class="inline-flex gap-2 items-center justify-center bg-[#13ECCE] text-black px-8 py-3 rounded-full font-bold text-base shadow-md hover:bg-[#128C7E] transition">
+                Agendar Avaliação
+            </a>
+        </div>
+    </section>
+
+    <section id="tratamentos" class="min-h-screen bg-[#F1F1F1] pt-12 p-32">
+        <div class="flex justify-center  items-center gap-6 mb-12">
+            <h3 class="text-[3rem] font-bold text-[#0C70F2] leading-none w-[50%]">
+                Como faremos a diferença em suas medidas
+            </h3>
+            <p class="text-[15px] w-[50%]">
+                Você vai entender o porquê não temos resultado, porquê é difícil gerenciar o sobrepeso,
+                onde erramos e onde podemos acertar.
+                O SOBRE MIM é 100% personalizado de acordo com suas taxas metabólicas e seu DNA.
+            </p>
+        </div>
+        <div class="grid grid-cols-3 gap-8">
+            <div
+                class="flex flex-col w-[25vw] h-[30vw] justify-around bg-white p-6 rounded-2xl shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
+                <div
+                    class="flex h-16 w-16 aspect-square items-center justify-center bg-[--primary] text-white rounded-full">
+                    <i class="fa-solid fa-syringe text-[33px]"></i>
+                </div>
+                <h5 class="text-[--title] font-semibold text-[30px] leading-none">
+                    Intravenosos Personalizados
+                </h5>
+                <p>
+                    Experimente o poder da revitalização com nossos intravenosos projetados para atender às suas
+                    necessidades específicas de saúde
+                </p>
+                <a href="#contato" class="text-[var(--primary)] text-[18px]">
+                    Agende Sua Avalição
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div
+                class="flex flex-col w-[25vw] h-[30vw] justify-around bg-white p-6 rounded-2xl shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
+                <div
+                    class="flex h-16 w-16 aspect-square items-center justify-center bg-[--primary] text-white rounded-full">
+                    <i class="fa-solid fa-rotate  text-[33px]"></i>
+                </div>
+                <h5 class="text-[--title] font-semibold text-[30px] leading-none">
+                    Acompanhamento 360
+                </h5>
+                <p>
+                    Desfrute de um acompanhamento completo e abrangente que aborda todos os aspectos do seu organismo,
+                    maximizando sua perda de peso
+                </p>
+                <a href="#contato" class="text-[var(--primary)] text-[18px]">
+                    Agende Sua Avalição
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div
+                class="flex flex-col w-[25vw] h-[30vw] justify-around bg-white p-6 rounded-2xl shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
+                <div
+                    class="flex h-16 w-16 aspect-square items-center justify-center bg-[--primary] text-white rounded-full">
+                    <i class="fa-solid fa-calendar text-[33px]"></i>
+                </div>
+                <h5 class="text-[--title] font-semibold text-[30px] leading-none">
+                    Nutricionista Semanal
+                </h5>
+                <p>
+                    Receba orientação personalizada e apoio contínuo com nossas consultas nutricionais semanais,
+                    ajudando-o a alcançar seus objetivos rapidamente
+                </p>
+                <a href="#contato" class="text-[var(--primary)] text-[18px]">
+                    Agende Sua Avalição
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div
+                class="flex flex-col w-[25vw] h-[30vw] justify-around bg-white p-6 rounded-2xl shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
+                <div
+                    class="flex h-16 w-16 aspect-square items-center justify-center bg-[--primary] text-white rounded-full">
+                    <i class="fa-solid fa-dna text-[33px]"></i>
+                </div>
+                <h5 class="text-[--title] font-semibold text-[30px] leading-none">
+                    Implantes Hormonais
+                </h5>
+                <p>
+                    Restaurando a harmonia em seu corpo e otimizando sua saúde, ajuste o equilíbrio hormonal que está te
+                    afastando do seu objetivo
+                </p>
+                <a href="#contato" class="text-[var(--primary)] text-[18px]">
+                    Agende Sua Avalição
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div
+                class="flex flex-col w-[25vw] h-[30vw] justify-around bg-white p-6 rounded-2xl shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
+                <div
+                    class="flex h-16 w-16 aspect-square items-center justify-center bg-[--primary] text-white rounded-full">
+                    <i class="fa-solid fa-capsules text-[33px]"></i>
+                </div>
+                <h5 class="text-[--title] font-semibold text-[30px] leading-none">
+                    Reposição de vitaminas e minerais
+                </h5>
+                <p>
+                    Eleve sua saúde e energia dando ao seu corpo o
+                    impulso que ele precisa para alcançar a melhor versão
+                    de saúde e conforto estético
+                </p>
+                <a href="#contato" class="text-[var(--primary)] text-[18px]">
+                    Agende Sua Avalição
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div
+                class="flex flex-col w-[25vw] h-[30vw] justify-around bg-white p-6 rounded-2xl shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
+                <div
+                    class="flex h-16 w-16 aspect-square items-center justify-center bg-[--primary] text-white rounded-full">
+                    <i class="fa-solid fa-apple-whole text-[33px]"></i>
+                </div>
+                <h5 class="text-[--title] font-semibold text-[30px] leading-none">
+                    Programas de emagrecimento
+                </h5>
+                <p>
+                    Alcançar seu peso ideal pode ser um desafio, mas com nossos programas personalizados, você terá o
+                    suporte e orientação necessários para
+                    transformar seu corpo
+                </p>
+                <a href="#contato" class="text-[var(--primary)] text-[18px]">
+                    Agende Sua Avalição
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="perguntas" class="min-h-screen flex items-center justify-center bg-gray-50 py-20">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+            <!-- Imagem lateral -->
+            <div class="flex justify-center">
+                <img src="foto-medico.jpg" alt="Dr. Tiago Marinho"
+                    class="w-80 h-auto rounded-2xl shadow-lg object-cover">
+            </div>
+
+            <!-- Conteúdo FAQ -->
+            <div class="w-full max-w-2xl">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-center md:text-left mb-2 text-[--title]">
+                    Perguntas Frequentes
+                </h2>
+                <p class="mb-2">
+                    Dr. Tiago Marinho é referência nacional em tratamento para a obesidade e sobrepeso.
+                    Confira aqui as principais dúvidas.
+                </p>
+                <div class="space-y-4">
+                    <!-- Item 1 -->
+                    <details class="group bg-white rounded-2xl p-6 shadow-md" open>
+                        <summary class="flex items-center justify-between cursor-pointer list-none">
+                            <span class="w-[35vw]text-lg md:text-xl font-semibold text-[--title]">
+                                O que é o tratamento oferecido?
+                            </span>
+                            <svg class="w-6 h-6 text-[--title] transform transition-transform duration-200 group-open:rotate-45"
+                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </summary>
+                        <div class="mt-4 text-base leading-relaxed text-gray-600">
+                            <p>
+                                Trata-se de um acompanhamento nutricional e médico individualizado com foco em
+                                emagrecimento saudável,
+                                reeducação alimentar e otimização metabólica, baseado em evidências científicas.
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- Item 2 -->
+                    <details class="group bg-white rounded-2xl p-6 shadow-md">
+                        <summary class="flex items-center justify-between cursor-pointer list-none">
+                            <span class="w-[35vw]text-lg md:text-xl font-semibold text-[--title]">
+                                Como agendo uma consulta?
+                            </span>
+                            <svg class="w-6 h-6 text-[--title] transform transition-transform duration-200 group-open:rotate-45"
+                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </summary>
+                        <div class="mt-4 text-base leading-relaxed text-gray-600">
+                            <p>
+                                O agendamento é feito pelo telefone/WhatsApp disponível no site ou pelo formulário de
+                                contato.
+                                Após o agendamento, você recebe orientações pré-consulta.
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- Item 3 -->
+                    <details class="group bg-white rounded-2xl p-6 shadow-md">
+                        <summary class="flex items-center justify-between cursor-pointer list-none">
+                            <span class="w-[35vw]text-lg md:text-xl font-semibold text-[--title]">
+                                Preciso fazer exames antes da consulta?
+                            </span>
+                            <svg class="w-6 h-6 text-[--title] transform transition-transform duration-200 group-open:rotate-45"
+                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </summary>
+                        <div class="mt-4 text-base leading-relaxed text-gray-600">
+                            <p>
+                                Se você já tiver exames recentes, traga-os. Caso não tenha, a primeira consulta pode
+                                incluir
+                                solicitação de exames laboratoriais para avaliação completa.
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- Item 4 -->
+                    <details class="group bg-white rounded-2xl p-6 shadow-md">
+                        <summary class="flex items-center justify-between cursor-pointer list-none">
+                            <span class="w-[35vw]text-lg md:text-xl font-semibold text-[--title]">
+                                Que resultados posso esperar?
+                            </span>
+                            <svg class="w-6 h-6 text-[--title] transform transition-transform duration-200 group-open:rotate-45"
+                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </summary>
+                        <div class="mt-4 text-base leading-relaxed text-gray-600">
+                            <p>
+                                Resultados variam conforme o caso e adesão às orientações.
+                                O objetivo é perda de peso sustentável, melhora de marcadores metabólicos e qualidade de
+                                vida.
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- Item 5 -->
+                    <details class="group bg-white rounded-2xl p-6 shadow-md">
+                        <summary class="flex items-center justify-between cursor-pointer list-none">
+                            <span class="w-[35vw]text-lg md:text-xl font-semibold text-[--title]">
+                                Atende por teleconsulta?
+                            </span>
+                            <svg class="w-6 h-6 text-[--title] transform transition-transform duration-200 group-open:rotate-45"
+                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </summary>
+                        <div class="mt-4 text-base leading-relaxed text-gray-600">
+                            <p>
+                                Sim. Há opção de teleconsulta para pacientes que preferem atendimento remoto.
+                                Verifique disponibilidade no agendamento.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+                <p class="text-[15px] leading-none mt-2 text-center font-medium text-gray-500">
+                    Caso sua dúvida não esteja aqui, entre em contato conosco através do formulário ou WhatsApp.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="min-h-screen bg-white flex items-center justify-center">
+        <div class="w-full max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+            <div>
+                <h3 class="text-4xl font-bold text-[var(--primary)] mb-4">Agende sua consulta</h3>
+                <p class="mb-6 text-gray-600">
+                    Entre em contato e agende sua avaliação para começar sua transformação com o Dr. Tiago Marinho.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-phone text-[var(--primary)]"></i>
+                        <span>(85) 9 1234-5678</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-envelope text-[var(--primary)]"></i>
+                        <span>contato@drtiagomarinho.com.br</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-location-dot text-[var(--primary)]"></i>
+                        <span>Av. Exemplo, 123 - Fortaleza, CE</span>
+                    </li>
+                </ul>
+            </div>
+            <form action="#" class="bg-gray-100 p-6 rounded-lg shadow-md space-y-4">
+                <div>
+                    <label for="nome" class="block text-sm font-medium">Nome</label>
+                    <input type="text" id="nome" class="w-full p-2 rounded border border-gray-300">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium">Whatsapp</label>
+                    <input type="email" id="email" class="w-full p-2 rounded border border-gray-300">
+                </div>
+                <div>
+                    <label for="mensagem" class="block text-sm font-medium">Mensagem</label>
+                    <textarea id="mensagem" rows="4" class="w-full p-2 rounded border border-gray-300"></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full bg-[var(--primary)] text-white font-semibold py-2 rounded hover:bg-blue-700 transition">
+                    Enviar
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="footer" class="relative min-h-[40vh] bg-[var(--primary)]">
+        <div class="flex flex-col gap-5 pt-[2.5rem] w-full justify-center items-center">
+            <h4 class="text-white text-center font-bold text-[3rem] leading-none">
+                Pronto(a) para sua melhor versão? <br />
+                Agende sua avaliação
+                <span class="relative z-10 text-[#13F2DC]">agora mesmo!</span>
+            </h4>
+            <div class="flex gap-3">
+                <button class="bg-blue-900 text-white px-12 py-3 rounded-full font-bold">
+                    AGENDAR AVALIAÇÃO
+                </button>
+                <a href="#"
+                    class="inline-flex gap-2 items-center justify-center bg-[#25D366] text-white px-8 py-3 rounded-full font-bold text-base shadow-md hover:bg-[#128C7E] transition">
+                    ENVIAR MENSAGEM <i class="fa-brands fa-whatsapp text-[22px]"></i>
+                </a>
+            </div>
+        </div>
+        <div
+            class="flex text-[14px] justify-around text-center items-center p-4 absolute bottom-0 w-full bg-black text-white">
+            <p><i class="fas fa-user-md mr-2"></i>Dr. Tiago Marinho | Nutrologia Avançada</p>
+            <p><i class="fab fa-instagram mr-2"></i>@drtiagomarinho</p>
+            <p><i class="fas fa-phone-alt mr-2"></i>(85) 9 1234-5678</p>
+            <p><i class="far fa-copyright mr-2"></i>Todos os direitos reservados - 2025</p>
+        </div>
+
+    </footer>
+        <script src="./scripts.js"></script>
+</body>
+
+</html>
