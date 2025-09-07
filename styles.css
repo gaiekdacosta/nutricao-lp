@@ -1,5 +1,6 @@
 :root {
     --primary: #0554F2;
+    --title: #0C70F2;
     --secondary: #10DEDF;
     --nav-height: 76px;
 }
@@ -7,8 +8,23 @@
 body {
     font-family: 'Montserrat', system-ui, sans-serif;
     scroll-behavior: smooth;
+    background: white;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 .active {
     color: var(--secondary) !important;
+}
+
+nav a {
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav a.active {
+    color: #13F2DC;
+    border-bottom: 2px solid #13F2DC;
 }
